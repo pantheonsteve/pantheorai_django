@@ -1,6 +1,13 @@
 from django.urls import path
-from django.views.generic import TemplateView
+from django.http import HttpResponse
+from .views import ChatView, GongSummaryView, OpportunityView
+
+def api_placeholder(request):
+    return HttpResponse("API Placeholder: This is the API endpoint.")
 
 urlpatterns = [
-    path('', TemplateView.as_view(template_name='index.html')),
+    path('test/', api_placeholder),
+    path('chat/', ChatView.as_view(), name='chat'),
+    path('gong/<str:id>/', GongSummaryView.as_view(), name='gong'),
+    path('opportunity/<str:opp_id>/', OpportunityView.as_view(), name='opportunity')
 ]
