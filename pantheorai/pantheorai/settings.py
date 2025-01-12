@@ -26,12 +26,12 @@ SECRET_KEY = 'django-insecure-%!la98aah&^jn96r9w)2=)#31r3lip=q#7ofuan+g_=07yzvdi
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['pantheorai.stevebresnick.net', '127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['api.pantheorai.stevebresnick.net', '127.0.0.1', 'localhost']
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
-    "http://pantheorai.stevebresnick.net",
-    "https://pantheorai.stevebresnick.net"
+    "http://api.pantheorai.stevebresnick.net",
+    "https://api.pantheorai.stevebresnick.net"
 ]
 
 CORS_ALLOW_ALL_ORIGINS = True
